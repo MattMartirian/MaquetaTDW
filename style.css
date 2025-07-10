@@ -204,4 +204,21 @@
                 display: flex;
             }
         
+.ficha {
+    position: absolute;
+    top: 60px;
+    right: 65px;
+    bottom: 60px;
+    width: 425px;
+    max-width: calc(100vw - 200px); /* 65px a izquierda y derecha */
+    background: white;
+    padding: 3px 40px;
+    z-index: 999;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: #002369 18px -18px;
+}
+
+
         }
