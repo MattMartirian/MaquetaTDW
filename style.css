@@ -1,81 +1,173 @@
-body, html{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-}
+@font-face {
+            font-family: 'Wien Pro';
+            src: url('fuentes/Wien Pro.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body, html{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            background-color: #040913;
+        }
+        .navbar{
+            height: 130px;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+        }
+        .links {
+            margin-left: 140px;
+            margin-right:  80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 35px;
+            flex: 1;
+        }
+        .links .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            flex:1;
+        }
+        .links a {
+            color: #002369;
+            text-align: center;
+            text-decoration-line:  none;
+            flex-grow: 1;
+            flex-shrink: 1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .links a:hover {
+            color: #fa4545;
+            transition: color 0.18s cubic-bezier(.4,0,.2,1);
+        }
+        .logo{
+            width:100%;
+            height: auto;
+        }
+        .logo img {
+            width: 170px;
+            height: auto;
+        }
+        .content {
+            width: 100%;
+            height: calc(100% - 130px);
+            overflow: hidden;
+            display: flex;
+            position: relative;
+        }
+        .content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 80%;
+        }
+        .footer {
+            width: 100%;
+            height: 100px;
+            background-color: #040913;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .ficha {
+            position: absolute;
+            top: 60px;
+            right: 65px;
+            bottom: 60px;
+            width: 425px;
+            background: white;
+            padding: 3px 40px;
+            z-index: 999;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: auto;
+            box-shadow: #002369 18px -18px;
+        }
+        .ficha p {
+                font-size: 20px;
+        }
+        .ficha h2 {
+            font-size: 42px;
+            color: #14141b;
+        }
+        .marca-global {
+            font-size: 58px;
+            color: #002369;
+            font-family: 'Wien Pro', sans-serif;
+        }
 
-.container {
-    width: 100%;
-    height: 100%;
-    background-color: #040913;
-}
+        .mobile-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1001;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
 
-.navbar{
-    height: 130px;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-}
+        .mobile-menu.active {
+            max-height: 400px;
+        }
 
-.links {
-    margin-left: 200px;
-    margin-right:  80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-size: 35px;
-    flex: 1;
-}
+        .mobile-menu a {
+            display: block;
+            padding: 20px;
+            color: #002369;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 24px;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: center;
+        }
 
-.links .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    flex:1;
-}
-.links a {
-    color: #002369;
-    text-align: center;
-    text-decoration-line:  none;
-    flex: 1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+        .mobile-menu a:hover {
+            background-color: #f5f5f5;
+            color: #fa4545;
+        }
 
-.links a:hover {
-    color: #fa4545;
-    transition: color 0.18s cubic-bezier(.4,0,.2,1);
-}
-.logo{
-    width:100%;
-    height: auto;
-}
-.logo img {
-    width: 170px;
-    height: auto;
-}
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
 
-.content {
-    width: 100%;
-    height: calc(100% - 130px);
-    overflow: hidden;
-    display: flex;
-}
-.content img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 80%; 
-}
-.footer {
-    width: 100%;
-    height: 100px;
-    background-color: #040913;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+        @media (max-width: 1050px) {
+            .navbar{
+                height: 85px;
+                position: relative;
+                z-index: 1000;
+            }
+           
+            .links{
+                flex-direction: column;
+                margin: 0;
+                padding: 0 20px;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .links a {
+                display: none;
+            }
+
+            .logo {
+                cursor: pointer;
+            }
+
+            .logo img {
+                width: 160px;
+            }
+        }
