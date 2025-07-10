@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <title>GLOBAL - IT</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagenes/GLOBAL_FAVICON.png">
 </head>
+
 <body>
     <div class="container">
-        <div class="navbar">
-                <div class="links">
-                    <div class="logo">
-                        <img src="imagenes/GLOBAL_LOGO.png" alt="Logo" />
-                    </div>
-                    <a href="Inicio.html">Inicio</a>
-                    <a href="Nosotros.html">Nosotros</a>
-                    <a href="Servicios.html">Servicios</a>
-                    <a href="Sectores.html">Sectores</a>
-                    <a href="Contacto.html">Contacto</a>
+
+        <div class="navbar-desktop">
+            <div class="links">
+                <div class="logo">
+                    <img src="imagenes/GLOBAL_LOGO.png" alt="Logo" />
                 </div>
+                <a href="Inicio.html">Inicio</a>
+                <a href="Nosotros.html">Nosotros</a>
+                <a href="Servicios.html">Servicios</a>
+                <a href="Sectores.html">Sectores</a>
+                <a href="Contacto.html">Contacto</a>
+            </div>
         </div>
+
+
+        <div class="navbar-mobile">
+            <div class="mobile-nav-content">
+                <div class="mobile-logo" id="mobileLogo">
+                    <img src="imagenes/GLOBAL_LOGO_COMPACTED.png" alt="Logo Compacto" />
+                </div>
+            </div>
+
+            <!-- Menú desplegable móvil -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="Inicio.html">Inicio</a>
+                <a href="Nosotros.html">Nosotros</a>
+                <a href="Servicios.html">Servicios</a>
+                <a href="Sectores.html">Sectores</a>
+                <a href="Contacto.html">Contacto</a>
+            </div>
+        </div>
+
         <div class="content">
-
-
             
         </div>
+
         <div class="footer">
             <p>© 2025 Global. Todos los derechos reservados.</p>
         </div>
     </div>
+
+    <script>
+        document.getElementById('mobileLogo').addEventListener('click', function (e) {
+            e.stopPropagation();
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+
+        document.addEventListener('click', function (event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLogo = document.getElementById('mobileLogo');
+
+            if (!mobileMenu.contains(event.target) && !mobileLogo.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
