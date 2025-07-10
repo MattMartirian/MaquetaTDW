@@ -169,7 +169,17 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
 }
+
+.footer-decoration{
+    display: inline-block;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 10px 0;
+}
+
 
 .ficha {
     position: absolute;
