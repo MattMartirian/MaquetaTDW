@@ -8,9 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <div class="navbar">
+        <!-- Navbar Desktop -->
+        <div class="navbar-desktop">
             <div class="links">
-                <div class="logo" id="logo">
+                <div class="logo">
                     <img src="imagenes/GLOBAL_LOGO.png" alt="Logo" />
                 </div>
                 <a href="Inicio.html">Inicio</a>
@@ -19,7 +20,16 @@
                 <a href="Sectores.html">Sectores</a>
                 <a href="Contacto.html">Contacto</a>
             </div>
-           
+        </div>
+        
+        <!-- Navbar Mobile -->
+        <div class="navbar-mobile">
+            <div class="mobile-nav-content">
+                <div class="mobile-logo" id="mobileLogo">
+                    <img src="imagenes/GLOBAL_LOGO_COMPACTED.png" alt="Logo Compacto" />
+                </div>
+            </div>
+            
             <!-- Menú desplegable móvil -->
             <div class="mobile-menu" id="mobileMenu">
                 <a href="Inicio.html">Inicio</a>
@@ -29,32 +39,34 @@
                 <a href="Contacto.html">Contacto</a>
             </div>
         </div>
-       
+        
         <div class="content">
             <img src="imagenes/office_background.png" alt="" />
-           
+            
             <div class="ficha">
                 <h2><span class="marca-global">GLOBAL</span><br>La consultora de IT más grande del mundo.</h2>
                 <p>En GLOBAL transformamos tecnología en progreso. Somos líderes globales en consultoría IT, ofreciendo soluciones innovadoras y escalables que potencian empresas de todos los sectores. Desde desarrollo front-end y back-end hasta implementación en la nube y ciberseguridad, acompañamos a nuestros clientes en cada paso hacia su transformación digital. Nuestro compromiso: excelencia, innovación y resultados reales.</p>
             </div>
         </div>
-       
+        
         <div class="footer">
             <p>© 2025 Global. Todos los derechos reservados.</p>
         </div>
     </div>
+    
     <script>
-        document.getElementById('logo').addEventListener('click', function(e) {
+        // Funcionalidad del menú móvil
+        document.getElementById('mobileLogo').addEventListener('click', function(e) {
             e.stopPropagation();
             document.getElementById('mobileMenu').classList.toggle('active');
         });
-
+        
         // Cerrar menú al hacer clic fuera
         document.addEventListener('click', function(event) {
             const mobileMenu = document.getElementById('mobileMenu');
-            const logo = document.getElementById('logo');
-           
-            if (!mobileMenu.contains(event.target) && !logo.contains(event.target)) {
+            const mobileLogo = document.getElementById('mobileLogo');
+            
+            if (!mobileMenu.contains(event.target) && !mobileLogo.contains(event.target)) {
                 mobileMenu.classList.remove('active');
             }
         });
