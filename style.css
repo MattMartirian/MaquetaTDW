@@ -153,6 +153,7 @@ html {
     height: calc(100% - 130px);
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     position: relative;
 }
 
@@ -500,6 +501,82 @@ html {
     font-size: 18px;
     color: #14141b;
 }
+
+
+.header-contacto {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e0e0e0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.elemento-contacto {
+    width: 100%;
+    max-width: 1200px; 
+    height: auto; 
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    gap: 90px;
+    color: #e0e0e0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.elemento-contacto div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-corto {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+    font-size: 16px;
+    color: #e0e0e0;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent;
+}
+.input-corto.mensaje {
+    height: 120px; /* o el alto que desees */
+    resize: vertical; /* permite redimensionar si querés */
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.boton-enviar {
+    width: 90px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.boton-enviar:hover {
+    background-color: white;
+    color: #002369;
+}
+
+
+
+
+
+
+
 
 
 
