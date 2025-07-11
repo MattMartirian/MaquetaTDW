@@ -6,6 +6,22 @@
     <title>GLOBAL - IT</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagenes/GLOBAL_FAVICON.png">
+
+    <style>
+        .container {
+            background-color: #002369;
+            height: auto;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+
+        .content {
+            width: 100%;
+            display: flex;
+            padding: 40px 0px 0px 0px;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +48,6 @@
                 </div>
             </div>
 
-            <!-- Menú desplegable móvil -->
             <div class="mobile-menu" id="mobileMenu">
                 <a href="Inicio.html">Inicio</a>
                 <a href="Nosotros.html">Nosotros</a>
@@ -43,12 +58,61 @@
         </div>
 
         <div class="content">
-            
-        </div>
 
-        <div class="footer">
-            <p>© 2025 Global. Todos los derechos reservados.</p>
+            <div class="fichas-sectores">
+
+                <div class="ficha-sector">
+                    <div class="ficha-header">
+                        <img src="imagenes/volkswagen.png" alt="automotriz1" />
+                    </div>
+                    <div class="ficha-body">
+                        Con Volkswagen implementamos soluciones avanzadas de ciberseguridad, realizando auditorías exhaustivas y configurando firewalls para proteger sus sistemas internos de ataques externos. Esto garantizó la seguridad de la información sensible y la continuidad operativa en sus plantas de producción.
+                    </div>
+                </div>
+
+                <div class="ficha-sector">
+                    <div class="ficha-header">
+                        <img src="imagenes/peugeot.png" alt="automotriz1" />
+                    </div>
+                    <div class="ficha-body">
+                       Para Peugeot diseñamos y desarrollamos aplicaciones a medida para su plataforma móvil, facilitando la gestión de su red de concesionarios y mejorando la experiencia del usuario final. Nuestro software personalizado permite optimizar procesos de venta y postventa con funcionalidades específicas adaptadas a sus necesidades.
+                    </div>
+                </div>
+
+                <div class="ficha-sector">
+                    <div class="ficha-header">
+                        <img src="imagenes/mercedes.png" alt="automotriz1" />
+                    </div>
+                    <div class="ficha-body">
+                        Mercedes confió en nuestro equipo para brindar soporte técnico 24/7, con atención rápida y resolución de incidentes en sus sistemas críticos. Nuestro servicio incluye mantenimiento preventivo y monitoreo remoto para minimizar tiempos de inactividad y asegurar el rendimiento óptimo de sus operaciones.
+                    </div>
+                </div>
+
+                <div class="ficha-sector">
+                    <div class="ficha-header">
+                        <img src="imagenes/wiesmann.png" alt="automotriz1" />
+                    </div>
+                    <div class="ficha-body">
+                        Implementamos y gestionamos la infraestructura tecnológica de Wiesmann, desde redes hasta servidores en la nube, asegurando una plataforma robusta y escalable. Esto permitió mejorar la comunicación interna y soportar el crecimiento de sus operaciones digitales sin interrupciones.
+                    </div>
+                </div>
+                
+                <div class="ficha-sector">
+                    <div class="ficha-header">
+                        <img src="imagenes/mclaren.png" alt="automotriz1" />
+                    </div>
+                    <div class="ficha-body">
+                        Trabajamos junto al equipo de Fórmula 1 de McLaren para desarrollar un avanzado sistema integral de mediciones y telemetría. Este sistema captura datos en tiempo real desde los autos, permitiendo análisis precisos del rendimiento y facilitando decisiones estratégicas que potencian su desempeño en las competencias más exigentes.
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Global. Todos los derechos reservados.</p>
+    </div>
     </div>
 
     <script>
@@ -56,15 +120,7 @@
             e.stopPropagation();
             document.getElementById('mobileMenu').classList.toggle('active');
         });
-
-        document.addEventListener('click', function (event) {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileLogo = document.getElementById('mobileLogo');
-
-            if (!mobileMenu.contains(event.target) && !mobileLogo.contains(event.target)) {
-                mobileMenu.classList.remove('active');
-            }
-        });
     </script>
 </body>
+
 </html>

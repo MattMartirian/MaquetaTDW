@@ -453,6 +453,55 @@ html {
     text-align: center;
 }
 
+.fichas-sectores{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 2900px;
+    flex-wrap: wrap;
+    gap: 95px;
+    margin-bottom: 60px;
+
+}
+
+.ficha-sector {
+    width: 244px;
+    height: 720px;
+    border: 3px solid #f5f5f5;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: transform 0.55s;
+    transform-style: preserve-3d;
+}
+
+.ficha-sector .ficha-header {
+    background-color: #002369;
+    height: 230px;
+    padding: 18px;
+    text-align: center;
+    font-family: 'Wien Pro', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.ficha-sector .ficha-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    color: #14141b;
+}
+
+
 
 @media (max-width: 1050px) {
 
