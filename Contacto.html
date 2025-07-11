@@ -3,25 +3,24 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>GLOBAL - IT</title>
+    <title>GLOBAL - CONTACTO</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagenes/GLOBAL_FAVICON.png">
 
     <style>
+    .container {
+        height: auto;
+        min-height: 100vh; 
+    }
 
-        .container {
-    height: auto;
-    min-height: 100vh; /* para que al menos cubra toda la pantalla */
-}
-
-.content {
-    width: 100%;
-    height: calc(100% - 130px);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
+    .content {
+        width: 100%;
+        height: calc(100% - 130px);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
     </style>
 </head>
 
@@ -43,13 +42,10 @@
 
 
         <div class="navbar-mobile">
-            <div class="mobile-nav-content">
-                <div class="mobile-logo" id="mobileLogo">
-                    <img src="imagenes/GLOBAL_LOGO_COMPACTED.png" alt="Logo Compacto" />
-                </div>
+            <div class="mobile-logo" id="mobileLogo">
+                <img src="imagenes/GLOBAL_LOGO_COMPACTED.png" alt="Logo Compacto" />
             </div>
 
-            <!-- Menú desplegable móvil -->
             <div class="mobile-menu" id="mobileMenu">
                 <a href="Inicio.html">Inicio</a>
                 <a href="Nosotros.html">Nosotros</a>
