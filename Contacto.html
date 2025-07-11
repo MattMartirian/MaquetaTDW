@@ -6,6 +6,23 @@
     <title>GLOBAL - IT</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagenes/GLOBAL_FAVICON.png">
+
+    <style>
+
+        .container {
+    height: auto;
+    min-height: 100vh; /* para que al menos cubra toda la pantalla */
+}
+
+.content {
+    width: 100%;
+    height: calc(100% - 130px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+    </style>
 </head>
 
 <body>
@@ -49,18 +66,18 @@
             </div>
             <div class="elemento-contacto">
                 <div>
-                <h1>Nombre*</h1>
-                <input class="input-corto" type="text" placeholder="Ingrese su nombre..." required>
+                <h1>Nombre*</h1> <span class="error"> Obligatorio.</span>
+                <input class="input-corto obligatorio" type="text" placeholder="Ingrese su nombre..." required>
                 </div>
                 <div>
-                <h1>Apellido*</h1>
-                <input class="input-corto" type="text" placeholder="Ingrese su apellido..." required>
+                <h1>Apellido*</h1> <span class="error"> Obligatorio.</span>
+                <input class="input-corto obligatorio" type="text" placeholder="Ingrese su apellido..." required>
                 </div>
             </div>
             <div class="elemento-contacto">
                 <div>
-                <h1>Email*</h1>
-                <input class="input-corto" type="text" placeholder="Ingrese su email..." required>
+                <h1>Email*</h1> <span class="error"> Obligatorio.</span>
+                <input class="input-corto obligatorio" type="email" placeholder="Ingrese su email..." required>
                 </div>
             </div>
             <div class="elemento-contacto">
@@ -69,8 +86,12 @@
                 <textarea class="input-corto mensaje" placeholder="Ingrese su mensaje..."></textarea>
                 </div>
             </div>
-
             <button class="boton-enviar">Enviar</button>
+
+            <div class="elemento-contacto">
+                <p>Dirección: Av. San Juan 925. Capital Federal</p>
+                <p>Tel: +54 12 3456 7890 Email: info@global.com</p>
+            </div>
         </div>
 
         <div class="footer">
@@ -79,19 +100,48 @@
     </div>
 
     <script>
-        document.getElementById('mobileLogo').addEventListener('click', function (e) {
-            e.stopPropagation();
-            document.getElementById('mobileMenu').classList.toggle('active');
+    // Menú móvil
+    document.getElementById('mobileLogo').addEventListener('click', function (e) {
+        e.stopPropagation();
+        document.getElementById('mobileMenu').classList.toggle('active');
+    });
+
+    document.addEventListener('click', function (event) {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLogo = document.getElementById('mobileLogo');
+
+        if (!mobileMenu.contains(event.target) && !mobileLogo.contains(event.target)) {
+            mobileMenu.classList.remove('active');
+        }
+    });
+
+    document.querySelector('.boton-enviar').addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const campos = document.querySelectorAll('.obligatorio');
+        let formularioValido = true;
+
+        campos.forEach(campo => {
+            const spanError = campo.previousElementSibling?.tagName === "SPAN"
+                ? campo.previousElementSibling
+                : campo.parentElement.querySelector('.error');
+
+            if (!campo.value.trim()) {
+    formularioValido = false;
+    if (spanError) spanError.style.visibility = 'visible';
+    campo.style.borderBottomColor = 'red';
+} else {
+    if (spanError) spanError.style.visibility = 'hidden';
+    campo.style.borderBottomColor = 'white';
+}
+
         });
 
-        document.addEventListener('click', function (event) {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileLogo = document.getElementById('mobileLogo');
+        if (formularioValido) {
+            alert("Mensaje enviado correctamente. En la brevedad nos pondremos en contacto con usted.");
+        }
+    });
+</script>
 
-            if (!mobileMenu.contains(event.target) && !mobileLogo.contains(event.target)) {
-                mobileMenu.classList.remove('active');
-            }
-        });
-    </script>
 </body>
 </html>

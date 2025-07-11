@@ -515,16 +515,21 @@ html {
 
 .elemento-contacto {
     width: 100%;
-    max-width: 1200px; 
-    height: auto; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 60px;
+    box-sizing: border-box; /* importante para que el padding no agrande el total */
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 90px;
+    gap: 45px;
     color: #e0e0e0;
     font-family: 'Open Sans', sans-serif;
 }
+
+
 
 .elemento-contacto div {
     flex: 1;
@@ -545,8 +550,7 @@ html {
     background: transparent;
 }
 .input-corto.mensaje {
-    height: 120px; /* o el alto que desees */
-    resize: vertical; /* permite redimensionar si querés */
+    height: 120px;
     padding: 10px;
     line-height: 1.5;
 }
@@ -571,7 +575,12 @@ html {
     color: #002369;
 }
 
-
+.error{
+    color: red;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    visibility: hidden;
+}
 
 
 
