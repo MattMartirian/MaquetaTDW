@@ -93,14 +93,6 @@ html {
     z-index: 1000;
 }
 
-.mobile-nav-content {
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
 .mobile-logo {
     cursor: pointer;
     display: flex;
@@ -113,7 +105,6 @@ html {
     height: auto;
     transition: transform 0.22s ease;
 }
-
 
 .mobile-logo img:hover {
     transform: scale(1.1);
@@ -158,7 +149,6 @@ html {
     font-family: 'Segoe UI';
     font-weight: bold;
 }
-
 
 .content {
     width: 100%;
@@ -386,7 +376,7 @@ html {
 .icono {
     position: relative;
     font-size: 24px;
-    z-index: 1; /* para estar por encima del fondo */
+    z-index: 1;
     display: inline-block;
 }
 
@@ -400,7 +390,7 @@ html {
     height: 60px;
     background-color: white;
     border-radius: 50%;
-    z-index: -1; /* detrás del emoji */
+    z-index: -1; 
 }
 
 
@@ -536,7 +526,7 @@ html {
     margin: 0 auto;
     padding-left: 40px;
     padding-right: 60px;
-    box-sizing: border-box; /* importante para que el padding no agrande el total */
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
