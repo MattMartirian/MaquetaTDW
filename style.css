@@ -213,7 +213,7 @@ html {
     align-items: center;
     margin-top: 160px;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1100px;
     flex-wrap: wrap;
     gap: 35px;
     margin-top: 0;
@@ -221,9 +221,8 @@ html {
 }
 
 .ficha-flex {
-  width: 320px;
-  height: 300px;
-  perspective: 1000px;
+  width: 280px;
+  height: 280px;
   cursor: pointer;
 }
 
@@ -299,6 +298,27 @@ html {
   box-sizing: border-box;
 }
 
+    .ficha-back-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .ficha-back-content .icono {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .ficha-back-content h3 {
+      margin: 5px 0;
+      font-family: 'Wien Pro', sans-serif;
+      font-size: 20px;
+    }
+    .ficha-back-content p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 15px;
+    }
+
+
 .marca-global {
     font-size: 58px;
     color: #002369;
@@ -348,6 +368,28 @@ html {
     padding: 15px;
     box-sizing: border-box;
 }
+
+
+.icono {
+    position: relative;
+    font-size: 24px;
+    z-index: 1; /* para estar por encima del fondo */
+    display: inline-block;
+}
+
+.icono::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: -1; /* detrás del emoji */
+}
+
 
 
 

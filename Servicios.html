@@ -13,24 +13,14 @@
             background-color: #002369;
             height: auto;
             min-height: 100vh;
-            /* para que al menos cubra toda la pantalla */
-            background-size: cover;
-            /* Cubre todo el fondo */
-            background-position: center;
-            /* Centra la imagen en el fondo */
+            overflow-y: auto;
         }
 
         .content {
             width: 100%;
-            height: calc(100% - 130px);
-            overflow: hidden;
-            display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 20px;
-            flex: 1;
-            /* Ocupa el espacio restante */
-            position: relative;
         }
     </style>
 </head>
@@ -81,115 +71,122 @@
                 <div class="ficha-flex">
                     <div class="ficha-total">
                         <div class="ficha-front">
-                            <div class="ficha-header">
-                                <h2>CONSULTORÍA IT</h2>
-                            </div>
+                            <div class="ficha-header"><h2>CONSULTORÍA IT</h2></div>
                             <div class="ficha-body">
-                                <p>Brindamos asesoramiento estratégico en tecnología, ayudando a optimizar procesos y
-                                    decisiones tecnológicas.</p>
+                                Brindamos asesoramiento estratégico en tecnología, ayudando a optimizar procesos.
                             </div>
                         </div>
                         <div class="ficha-back">
-                            <p>Te ayudamos a diseñar una estrategia tecnológica alineada a tus objetivos de negocio.</p>
+                            <div class="ficha-back-content">
+                                <div class="icono">🧭</div>
+                                <h3>Decisiones inteligentes</h3>
+                                <p>Te guiamos con análisis y visión estratégica.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="ficha-flex">
-                    <div class="ficha-total">
-                        <div class="ficha-front">
-                            <div class="ficha-header">
-                                <h2>DESARROLLO DE SOFTWARE</h2>
-                            </div>
-                            <div class="ficha-body">
-                                <p>Diseño y creación de soluciones a medida para plataformas web, móviles y de
-                                    escritorio.</p>
-                            </div>
-                        </div>
-                        <div class="ficha-back">
-                            <p>Aplicaciones eficientes, seguras y adaptadas 100% a las necesidades de tu empresa.</p>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="ficha-flex">
                     <div class="ficha-total">
                         <div class="ficha-front">
-                            <div class="ficha-header">
-                                <h2>SOPORTE TÉCNICO</h2>
-                            </div>
+                            <div class="ficha-header"><h2>DESARROLLO DE SOFTWARE</h2></div>
                             <div class="ficha-body">
-                                <p>Resolución eficiente de incidentes técnicos y mantenimiento de sistemas en tiempo
-                                    real.</p>
+                                Diseño y creación de soluciones a medida para plataformas web, móviles y de escritorio.
                             </div>
                         </div>
                         <div class="ficha-back">
-                            <p>Respuestas rápidas, asistencia 24/7 y monitoreo continuo de tus sistemas.</p>
+                            <div class="ficha-back-content">
+                                <div class="icono">⚙️</div>
+                                <h3>Software a medida</h3>
+                                <p>Desarrollos seguros, escalables, funcionales y confiables.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+  
                 <div class="ficha-flex">
                     <div class="ficha-total">
                         <div class="ficha-front">
-                            <div class="ficha-header">
-                                <h2>INFRAESTRUCTURA</h2>
-                            </div>
+                            <div class="ficha-header"><h2>SOPORTE TÉCNICO</h2></div>
                             <div class="ficha-body">
-                                <p>Implementación y administración de redes, servidores y entornos cloud o híbridos.</p>
+                                Resolución eficiente de incidentes técnicos y mantenimiento en tiempo real.
                             </div>
                         </div>
                         <div class="ficha-back">
-                            <p>Montaje y mantenimiento de infraestructuras robustas y escalables.</p>
+                            <div class="ficha-back-content">
+                                <div class="icono">🛡️</div>
+                                <h3>Siempre disponibles</h3>
+                                <p>Soporte remoto 24/7.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="ficha-flex">
-                    <div class="ficha-total">
-                        <div class="ficha-front">
-                            <div class="ficha-header">
-                                <h2>CIBERSEGURIDAD</h2>
-                            </div>
-                            <div class="ficha-body">
-                                <p>Protegemos la información crítica de tu empresa mediante auditorías, monitoreo y
-                                    soluciones antiintrusión.</p>
-                            </div>
-                        </div>
-                        <div class="ficha-back">
-                            <p>Te protegemos frente a amenazas digitales con tecnologías avanzadas.</p>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="ficha-flex">
                     <div class="ficha-total">
                         <div class="ficha-front">
-                            <div class="ficha-header">
-                                <h2>TRANSFORMACIÓN DIGITAL</h2>
-                            </div>
+                            <div class="ficha-header"><h2>INFRAESTRUCTURA</h2></div>
                             <div class="ficha-body">
-                                <p>Acompañamos a las organizaciones en su evolución digital con herramientas modernas y
-                                    eficientes.</p>
+                                Implementación y administración de redes, servidores y cloud.
                             </div>
                         </div>
                         <div class="ficha-back">
-                            <p>Ayudamos a reducir costos, mejorar la eficiencia y alinear la tecnología con tu negocio.
-                            </p>
+                            <div class="ficha-back-content">
+                                <div class="icono">🏢</div>
+                                <h3>Infraestructura sólida</h3>
+                                <p>Redes, servidores y cloud adaptados a tus necesidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="ficha-flex">
+                    <div class="ficha-total">
+                        <div class="ficha-front">
+                            <div class="ficha-header"><h2>CIBERSEGURIDAD</h2></div>
+                            <div class="ficha-body">
+                                Protegemos tu información con auditorías y soluciones antiintrusión.
+                            </div>
+                        </div>
+                        <div class="ficha-back">
+                            <div class="ficha-back-content">
+                                <div class="icono">🔒</div>
+                                <h3>Protección total</h3>
+                                <p>Firewalls, análisis de vulnerabilidades y prevención contra cibercriminales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+ 
+                <div class="ficha-flex">
+                    <div class="ficha-total">
+                        <div class="ficha-front">
+                            <div class="ficha-header"><h2>TRANSFORMACIÓN DIGITAL</h2></div>
+                            <div class="ficha-body">
+                                Acompañamos tu evolución digital con herramientas modernas.
+                            </div>
+                        </div>
+                        <div class="ficha-back">
+                            <div class="ficha-back-content">
+                                <div class="icono">🚀</div>
+                                <h3>Digitalizá tu negocio</h3>
+                                <p>Procesos más ágiles para asegurar el éxito de tu empresa.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-
-
-
         </div>
-
     </div>
+
     <div class="footer">
         <p>© 2025 Global. Todos los derechos reservados.</p>
-    </div>
     </div>
 
     <script>
