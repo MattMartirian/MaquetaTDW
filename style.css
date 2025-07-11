@@ -65,6 +65,12 @@ html {
     color: #fa4545;
 }
 
+.links a.index {
+    color: #fa4545 ;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+}
+
 .logo {
     width: 100%;
     height: auto;
@@ -145,6 +151,12 @@ html {
 .mobile-menu a:hover {
     background-color: #f5f5f5;
     color: #fa4545;
+}
+
+.mobile-menu a.index {
+    color: #fa4545 ;
+    font-family: 'Segoe UI';
+    font-weight: bold;
 }
 
 
@@ -463,7 +475,6 @@ html {
     flex-wrap: wrap;
     gap: 95px;
     margin-bottom: 60px;
-
 }
 
 .ficha-sector {
@@ -474,9 +485,14 @@ html {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    transition: transform 0.55s;
-    transform-style: preserve-3d;
+    transition: box-shadow 0.5s ease, transform 0.5s ease; /* corregido */
 }
+
+.ficha-sector:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0px 0px 60px #e5e5e5;
+}
+
 
 .ficha-sector .ficha-header {
     background-color: #002369;
@@ -581,9 +597,6 @@ html {
     font-family: 'Open Sans', sans-serif;
     visibility: hidden;
 }
-
-
-
 
 
 
